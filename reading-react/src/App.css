@@ -1,0 +1,91 @@
+.App {
+  text-align: center;
+}
+
+header{
+  background-color: darkslateblue;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  padding: 5px 10px;
+}
+
+h1{
+  margin: 0;
+}
+
+.books{
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  width: 50%;
+}
+
+.container {
+  width: 100%;
+  margin: 20px auto;
+  max-width: 1200px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+img{
+  width: 500px;
+}
+
+.book{
+  display: flex;
+  flex: 1;
+  justify-content: space-between;
+  align-items: center;
+  background-color: lightgray;
+  padding: 0 15px;
+  border-bottom: 1px solid black;
+}
+
+.new{
+  font-size: 2em;
+  margin: -4px 0 0;
+  cursor: pointer;
+}
+
+.delete{
+  font-size: 2em;
+  cursor: pointer;
+}
+
+form{
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+}
+
+label{
+  display: flex;
+  justify-content: space-between;
+  margin: 5px 0;
+}
+
+input{
+  width: 70%;
+  font-size: 1em;
+}
+
+.buttons{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+
+button{
+  width: 48%;
+  padding:8px;
+}
+
+form > h2{
+  font-size: 1.8em;
+  font-weight: 400;
+  text-align: left;
+}
