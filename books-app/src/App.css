@@ -1,0 +1,18 @@
+.app {
+  display: flex;
+}
+.books {
+  flex-direction: column;
+background-color: #e8e8e8;
+width: 50%;
+border-radius: 7px;
+}
+.image { 
+flex-direction: column;
+
+width: 50%;
+}
+
+image {
+  width: 100px;
+}
