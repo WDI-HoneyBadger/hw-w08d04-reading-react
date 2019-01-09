@@ -1,0 +1,63 @@
+.app{
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  background-color: lightgray;
+}
+
+nav{
+  background-color: darkblue;
+  color: snow;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  padding: 5px 10px;
+}
+
+.container{
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  
+
+}
+.books {
+  width: 30%;
+  justify-content: space-between;
+  background-color: snow;
+  float: left;
+  
+}
+
+.bookInfos{
+  display: flex;
+  justify-content: space-between;
+  background-color: lightgray;
+  padding: 10px;
+  margin: 10px;
+  text-align: left;
+
+}
+
+p{
+  font-size: 14px;
+
+}
+  
+.image {
+  flex-direction: column;
+  width: 50%;
+  float: right;
+}
+
+button{
+  width: 7%;
+  border-radius: 5px;
+  font-size: 32px;
+  font-weight: 600;
+  margin-right: 10px;
+  background-color: snow;
+  color: darkblue;
+
+}
+  
+ 
+  
