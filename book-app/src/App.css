@@ -1,0 +1,50 @@
+.shows {
+  display: flex;
+  width: 70%;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0 auto;
+  background-color:hsl(60, 64%, 91%);
+  padding: 20px;
+  border-radius: 12px;
+}
+.form {
+  display: flex;
+  width: 70%;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0 auto;
+  background-color: hsl(270, 65%, 91%);
+  padding: 20px;
+  border-radius: 12px;
+}
+.App {
+  width: 70%;
+  flex-wrap:wrap;
+  justify-content: space-between;
+  margin: 0 auto;
+  background-color: #b9e6f5;
+  background-image: url('https://images.pexels.com/photos/1148399/pexels-photo-1148399.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500');
+  padding: 20px;
+  border-radius: 12px;
+}
+
+.book {
+  width: 200px;
+  height: 400px;
+}
+header{
+  color: black;
+  display:flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  padding: 5px 10px;
+}
+
+.tile > img {
+  width: 100%;
+}
+
+.tile > h2 {
+  background-color: lightcoral;
+}
