@@ -1,0 +1,51 @@
+.container{
+    width: 100%;
+    display: flex;
+}
+
+.bookList{
+    width: 50%;
+}
+
+.bookList > div{
+    border: solid black 1px;
+    background-color: rgb(177, 157, 197);
+    padding: 10px;
+    text-align: center;
+}
+
+.bookList > div > button{
+    border: black;
+    color: white;
+    background-color: rebeccapurple;
+}
+
+.imgOrForm{
+    padding: 50px;
+    width: 50%;
+}
+
+.header{
+    color: white;
+    display: flex;
+    justify-content: space-between; 
+    width: 100%;
+    background-color: rebeccapurple;
+}
+
+.header > button{
+    background-color: rebeccapurple;
+    font-size: 40px;
+    padding: 0px 5px;
+    margin-right: 20px;
+    border-radius: 10px;
+    border:none;
+    color: white
+}
+.header > h1{
+    margin-left: 20px;
+}
+
+.imgOrForm > img{
+    width: 100%
+}
