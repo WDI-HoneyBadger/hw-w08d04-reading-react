@@ -91,17 +91,23 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-       
+      <div className="header"></div>
+
           <button onClick={this.toggleModal.bind(this)}>Add New Book</button>
 
-            {this.state.modal ? <ShowForm createNewBook={this.createNewBook.bind(this)} /> : ''}
-            
-            {this.renderBook(this.state.books)}
-            <img className="img" src={this.state.show.image} alt="" />
-            
+          {this.state.modal ? <ShowForm createNewBook={this.createNewBook.bind(this)} /> : ''}
+          <div className="container">
+          <div className="info">
+          {this.renderBook(this.state.books)}
+          </div>
+          <div className="bookshow">
+          <img className="img" src={this.state.show.image} alt="" />
+          </div>
+
+        </div>
       </div>
-          );
-        }
-      }
-      
-      export default App;
+    );
+  }
+}
+
+export default App;
