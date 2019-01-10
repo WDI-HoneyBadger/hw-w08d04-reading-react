@@ -58,13 +58,23 @@ class App extends Component {
   deleteBook(id) {
     const url = `http://myapi-profstream.herokuapp.com/api/709544/books/${id}`
     fetch(url, {
-      method: 'DELETE',
-      headers: {
-        "Content-Type": "application/json"
-      }
+      method: 'DELETE'
     })
-    console.log(this.state.books)
+    .then(response => response.json())
+    .then(data => {
+      const updatedbooks = this.state.books.filter(books => books.id !== id);
+      console.log(updatedbooks)
+      this.setState({
+        books:updatedbooks,
+        activeBooks: null
+      })
+    })
+    .catch(error => {
+      console.log(error);
+    })
   }
+
+
 
   renderbooks(allbooks) {
     return allbooks.map((book) => {
@@ -73,7 +83,6 @@ class App extends Component {
           book={book}
           showCurrentBook={this.showCurrentBook.bind(this)}
           deleteBook={this.deleteBook.bind(this)}
-
         />
       )
     })
@@ -105,7 +114,6 @@ class App extends Component {
           <h2 className="he">Reading List</h2>
           <button onClick={this.toggleModal.bind(this)}><i class="material-icons">add</i></button>
         </div>
-        {this.state.modal ? <BooksForm createNewBook={this.createNewBook.bind(this)} /> : ''}
         <div className="container">
           <div className="info">
             {this.renderbooks(this.state.books)}</div>
