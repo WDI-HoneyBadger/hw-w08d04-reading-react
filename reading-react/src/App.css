@@ -1,0 +1,23 @@
+.shows {
+  display: flex;
+  width: 70%;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0 auto;
+  background-color: lightblue;
+  padding: 20px;
+  border-radius: 12px;
+}
+
+.tile {
+  width: 200px;
+  height: 400px;
+}
+
+.tile > img {
+  width: 100%;
+}
+
+.tile > h2 {
+  background-color: lightcoral;
+}
