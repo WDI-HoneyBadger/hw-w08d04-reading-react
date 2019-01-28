@@ -1,0 +1,110 @@
+.App {
+  text-align: center;
+  background-color: bisque;
+
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 40vmin;
+}
+
+.header {
+  background-color: #331094;
+  display: flex;
+  flex-direction: row;
+  color: white;
+  align-items: center;
+  justify-content: space-between ;
+  margin-bottom: 15px;
+
+}
+.he{
+  align-content:left;
+  justify-content: left;
+  align-items: left;
+  align-self: left;
+  left: 0;
+  padding: 10
+}
+
+ .header>button{
+  text-align: center;
+  right: 0;
+  padding: 10;
+  background-color: transparent;
+  border:1px solid #331094;
+  color: white;
+}
+i:hover{
+  font-size: 40px;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+.container{
+  display: flex;
+  flex-direction: row;
+  
+}
+
+.bookshow{
+ widows: 100%;
+}
+.bookshow img {
+  max-width: 80%;
+  height: auto;
+}
+
+.books{
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(218, 218, 218);
+  width: 600px;
+  margin-left: 90px;
+  margin-right: 60px;
+  margin-bottom: 0px;
+  border-bottom: gray solid 1px;
+  justify-content: space-between ;
+
+
+}
+.top{
+  padding: 3px 8px;
+  display: flex;
+  flex-direction: row;
+  align-content:left;
+  justify-content: space-between ;
+}
+.top .title{
+  color:red;
+  
+}
+.end{
+  display: flex;
+  flex-direction: row
+}
+.top>button{
+  text-align: center;
+  right: 0;
+  padding: 10;
+  background-color: transparent;
+  border:1px solid rgb(218, 218, 218);
+  color: red;
+}
+
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.title{
+  text-align: left;
+}
