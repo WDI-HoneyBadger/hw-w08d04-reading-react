@@ -1,0 +1,117 @@
+import React, { Component } from 'react';
+import './App.css';
+import ShowBook from './components/ShowBook';
+import ShowForm from './components/ShowForm';
+
+class App extends Component {
+  constructor() {
+    super()
+    this.state = {
+      books: '',
+      show: '',
+      model: false
+    }
+  }
+
+  createNewBook(book) {
+
+    const url = 'http://myapi-profstream.herokuapp.com/api/b20eee/books'
+    fetch(url, {
+      method: 'POST',
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(book)
+    })
+      .then(response => response.json())
+      .then(data => {
+        console.log(data);
+        const updatedShows = this.state.books.concat([data]);
+        console.log(updatedShows)
+        this.setState({
+          books: updatedShows
+        })
+      })
+
+  }
+
+  deleteBook(id) {
+    const url = `http://myapi-profstream.herokuapp.com/api/b20eee/books${id}`
+    fetch(url, {
+      method: 'DELETE',
+      headers: {
+        "Content-Type": "application/json"
+      }
+    })
+    console.log(this.state.books)
+  }
+
+  componentDidMount() {
+    fetch('http://myapi-profstream.herokuapp.com/api/b20eee/books')
+      .then(response => response.json())
+      .then(data => {
+        console.log(data)
+        this.setState({
+          books: data
+        })
+      })
+      .catch(error => {
+        console.log(error)
+      })
+  }
+
+  renderBook(show) {
+    return show.map((book, index) => {
+      return (
+        <ShowBook key={index}
+          book={book}
+          setCurrentShow={this.setCurrentShow.bind(this)}
+          deleteBook={this.deleteBook.bind(this)}
+        />
+      )
+    })
+  }
+
+  setCurrentShow(showBook) {
+    console.log(showBook)
+
+    this.setState({
+      show: showBook
+    })
+  }
+
+  toggleModal() {
+    this.setState({
+      modal: !this.state.modal
+    })
+  }
+
+  render() {
+    return (
+      <div className="App">
+        <div className="header"></div>
+
+        <button onClick={this.toggleModal.bind(this)}>Add a Book</button>
+
+        {this.state.modal ? <ShowForm createNewBook={this.createNewBook.bind(this)} /> : ''}
+
+
+        <div className="container">
+
+          <div className="info">
+
+            {this.renderBook(this.state.books)}
+
+          </div>
+
+          <div>
+            <img className="img" src={this.state.show.image} alt="" />
+          </div>
+
+        </div>
+      </div>
+    );
+  }
+}
+
+export default App;
